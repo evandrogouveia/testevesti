@@ -48,7 +48,7 @@ function clientes() {
             page2 +=  "<img src='img/clientes/" + prefix + i + ".svg' class='marcas'>";
         } else {
             page3 += "<img src='img/clientes/" + prefix + i + ".svg' class='marcas'>";
-        }
+        } 
     }
 }
 
@@ -69,11 +69,19 @@ function marcas(pg) {
         $("#next6").attr("src", "img/arrow2.svg");
         $("#next6").attr("class", "btn_right0 ativo");
         $("#next6").attr("onclick", "marcas(2)");
-    } else {
+    } else if (pg == 2) {
         document.getElementById("marcas").innerHTML = page2;
+        $("#back6").attr("src", "img/arrow3.svg");
+        $("#back6").attr("class", "btn_left1 ativo");
+        $("#back6").attr("onclick", "marcas(1)");
+        $("#next6").attr("src", "img/arrow2.svg");
+        $("#next6").attr("class", "btn_right0 ativo");
+        $("#next6").attr("onclick", "marcas(3)");
+    } else {
+        document.getElementById("marcas").innerHTML = page3;
         $("#next6").attr("src", "img/arrow1.svg");
         $("#next6").attr("class", "btn_right0 rotate");
-        $("#back6").attr("onclick", "marcas(1)");
+        $("#back6").attr("onclick", "marcas(2)");
         $("#next6").removeAttr("onclick");
     }
 
