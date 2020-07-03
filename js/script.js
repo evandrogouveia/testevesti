@@ -38,7 +38,7 @@ var page2 = "";
 var page3 = "";
 
 function clientes() {
-    for (var i = 0; i <= 187; i++) {
+    for (var i = 0; i <= 185; i++) {
         prefix = i < 10 ? '00' : i < 100 ? "0" : "";
         if (i < 56) {
             page0 += "<img src='img/clientes/" + prefix + i + ".svg' class='marcas'>";
